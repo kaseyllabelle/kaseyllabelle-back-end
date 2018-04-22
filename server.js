@@ -44,7 +44,7 @@ app.post('/email', (req, res) => {
           to: 'kasey.l.labelle@gmail.com', // list of receivers
           subject: 'kaseyllabelle.com contact request', // Subject line
           text: req.body.name + '\n' + req.body.email + '\n' + req.body.tel + '\n' + req.body.message, // plain text body
-          html: req.body.name + '\n' + req.body.email + '\n' + req.body.tel + '\n' + req.body.message // html body
+          html: req.body.name + "<br/>" + req.body.email + "<br/>" + req.body.tel + "<br/>" + req.body.message // html body
       };
 
       // send mail with defined transport object
