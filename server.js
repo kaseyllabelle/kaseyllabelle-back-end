@@ -66,7 +66,7 @@ app.post('/email', (req, res) => {
 let server;
 
 function runServer(){
-  const port = 8181;
+  const port = process.env.PORT || 8181;
   return new Promise((resolve, reject) => {
     server = app.listen(port, () => {
       console.log(`Your app is listening on port ${port}`);
